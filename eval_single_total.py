@@ -8,13 +8,13 @@ from torchvision.models.detection import maskrcnn_resnet50_fpn_v2
 from torchvision.transforms import functional as F
 
 # Classification Model Parameters
-CLASSIFICATION_MODEL_PATH = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\models\model_final.keras"
+CLASSIFICATION_MODEL_PATH = r"classification_model.keras"
 
 # Segmentation Model Parameters
-SEGMENTATION_MODEL_PATH = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\models\model_maskrcnn_v4.pth"
+SEGMENTATION_MODEL_PATH = r"segmentation_model.pth"
 
 # Image information
-IMAGE_FOLDER_PATH = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\evaluate"
+IMAGE_FOLDER_PATH = r"evaluate"
 IMAGE_SIZE = 256
 
 # Load Classification Model
@@ -115,3 +115,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
