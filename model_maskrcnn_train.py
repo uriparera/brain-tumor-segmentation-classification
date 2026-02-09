@@ -283,12 +283,12 @@ def train_model(model, train_loader, val_loader, device, num_epochs=10, learning
 
 # Main function
 def main():
-    train_json_path = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\archive_seg_reduced\train\_filtered_annotations.coco.json"
-    train_image_dir = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\archive_seg_reduced\train"
-    output_img_dir  = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\results2\images"
-    output_mask_dir = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\results2\masks"
-    metrics_output_path = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\results2\training_metrics_v5.json"
-    model_save_path = r"C:\Users\Uri\OneDrive\Documents\Uni\CPIA\project\models\model_maskrcnn_v5.pth"
+    train_json_path = r"train\_filtered_annotations.coco.json"
+    train_image_dir = r"archive_seg_reduced\train"
+    output_img_dir  = r"results2\images"
+    output_mask_dir = r"results2\masks"
+    metrics_output_path = r"results2\training_metrics_v5.json"
+    model_save_path = r"models\model_maskrcnn_v5.pth"
 
     # Load data (use your existing data loading functions)
     print("Loading data...")
@@ -340,3 +340,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
