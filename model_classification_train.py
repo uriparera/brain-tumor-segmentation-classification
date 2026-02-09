@@ -16,8 +16,8 @@ import matplotlib.pyplot as plt
 import warnings 
 warnings.filterwarnings("ignore")
 
-train_datasets = '/Users/toniloperabarril/Desktop/projecte/projecte3/Training'
-validation_datasets = '/Users/toniloperabarril/Desktop/projecte/projecte3/Testing'
+train_datasets = 'Training'
+validation_datasets = 'Testing'
 
 batch_size = 64
 image_size = 256  
@@ -76,7 +76,7 @@ num_classes = 4
 Fc_Head = addTopModel(densenet, num_classes)
 model = Model(inputs=densenet.input, outputs=Fc_Head)
 
-checkpoint = ModelCheckpoint('/Users/toniloperabarril/Desktop/projecte/model.keras',
+checkpoint = ModelCheckpoint('model.keras',
                              monitor="val_loss",
                              mode="min",
                              save_best_only=True,
@@ -117,7 +117,7 @@ history = model.fit(train_data,
 
 model_evaluation = model.evaluate(validation_data, batch_size=batch_size)
 
-model.save('/Users/toniloperabarril/Desktop/projecte/model.keras')
+model.save('model.keras')
 
 def plot_training_curves(history):
     loss = history.history['loss']
